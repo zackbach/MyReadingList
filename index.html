@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyReadingList</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header-div">
+    <h1>MyReadingList</h1>
+  </div>
+  <h2 id="introText">Click the blue + button to get started!</h2>
+  <button id="newBook" class="add-button">+</button>
+  <div id="bookModal" class="modal">
+    <div class="modal-content">
+      <form action="#" onsubmit="formSubmit(); return false" id="bookForm">
+        <label for="title">Title:</label>
+        <input type="text" id="formTitle" name="title"><br>
+        <label for="author">Author:</label>
+        <input type="text" id="formAuthor" name="author"><br>
+        <label for="pages">Number of Pages:</label>
+        <input type="number" id="formPages" name="pages" class="number"><br>
+        <label for="isRead">Read Status:</label>
+        <select id="formRead" name="isRead" >
+          <option value="Not yet read">Not Yet Read</option>
+          <option value="Has been read">Has Been Read</option>
+        </select><br>
+        <input type="submit" value="Submit" class="submit">
+      </form>
+    </div>
+  </div>
+  <div id="renderDiv"></div>
+  <script src="script.js"></script>
+</body>
+</html>
